@@ -5,7 +5,7 @@ SOUNDSDIR="$HOME/media/music"
 
 echo $$ > $MYPIDFILE
 
-eval 'zenity --info --text "stop?"; test "$?" == "0" && echo $(kill -9 `cat /home/jalil/.play.sh.pid` && pkill mplayer)'&
+eval 'zenity --info --text "stop?"; test "$?" == "0" && echo $(kill -9 `cat $HOME/.play.sh.pid` && pkill mplayer)'&
 
 LIST=( `find "$SOUNDSDIR" | tr ' ' '@'` )
 
